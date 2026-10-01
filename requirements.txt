@@ -1,0 +1,6 @@
+# requirements.txt
+fastapi==0.142.2
+uvicorn==0.54.0
+boto3==1.43.106
+pydantic==2.13.5
+pydantic-settings==2.15.0
