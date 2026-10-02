@@ -19,3 +19,13 @@ class AskResponse(BaseModel):
     answer: str
     model: str
     usage: TokenUsage
+
+
+class Source(BaseModel):
+    uri: str
+
+
+class RagResponse(BaseModel):
+    answer: str
+    sources: list[Source]
+    session_id: str | None = None

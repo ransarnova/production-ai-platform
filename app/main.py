@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
 
 from app.bedrock import BedrockServiceError, ask_model
-from app.models import AskRequest, AskResponse
+from app.models import AskRequest, AskResponse, RagResponse
+
+from app.rag import RagServiceError, ask_knowledge_base
 
 
 app = FastAPI(
@@ -22,3 +24,15 @@ def ask(request: AskRequest) -> AskResponse:
     except BedrockServiceError:
         raise HTTPException(
             status_code=503, detail="AI service temporarily unavailable")
+
+
+@app.post("/ai/v1/rag", response_model=RagResponse)
+def rag(request: AskRequest) -> RagResponse:
+    try:
+        return ask_knowledge_base(request.question)
+
+    except RagServiceError:
+        raise HTTPException(
+            status_code=503,
+            detail="RAG service temporarily unavailable",
+        )

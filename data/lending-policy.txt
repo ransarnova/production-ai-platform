@@ -1,0 +1,10 @@
+RanSarNova Lending Policy
+
+POLICY-001:
+Loan applications with more than 3 missed repayments during the previous 12 months require manual review.
+
+POLICY-002:
+Loan requests above INR 2,000,000 require approval from a senior credit officer.
+
+POLICY-003:
+Applicants with a debt-to-income ratio above 45% require enhanced affordability assessment.

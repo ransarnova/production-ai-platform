@@ -1,0 +1,43 @@
+[
+    {
+        "id": "policy_001",
+        "question": "What happens if someone has more than 3 missed repayments?",
+        "expected_policy": "POLICY-001",
+        "expected_keywords": [
+            "manual review"
+        ],
+        "should_abstain": false
+    },
+    {
+        "id": "policy_002",
+        "question": "What authorization is required for financing of INR 3 million?",
+        "expected_policy": "POLICY-002",
+        "expected_keywords": [
+            "senior credit officer"
+        ],
+        "should_abstain": false
+    },
+    {
+        "id": "policy_003",
+        "question": "What happens if an applicant has a debt-to-income ratio of 50%?",
+        "expected_policy": "POLICY-003",
+        "expected_keywords": [
+            "enhanced affordability assessment"
+        ],
+        "should_abstain": false
+    },
+    {
+        "id": "unknown_credit_score",
+        "question": "What is the minimum credit score required for a loan?",
+        "expected_policy": null,
+        "expected_keywords": [],
+        "should_abstain": true
+    },
+    {
+        "id": "unknown_age",
+        "question": "What is the minimum applicant age?",
+        "expected_policy": null,
+        "expected_keywords": [],
+        "should_abstain": true
+    }
+]
